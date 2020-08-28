@@ -4,7 +4,7 @@ const PUBLIC_KEY =
 const PRIVATE_KEY = "S2kJVVSeIrrxaqu38h7mgLwBjGCxvxrGi-rMqKjuKvs";
 
 push.setVapidDetails(
-  "maito: truongtrung.hieu0812@gmail.com",
+  "mailto: truongtrung.hieu0812@gmail.com",
   PUBLIC_KEY,
   PRIVATE_KEY
 );
