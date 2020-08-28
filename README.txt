@@ -1,0 +1,1 @@
+Purpose: use service worker and make a notification on the website

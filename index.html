@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="subscribe()">Subscribe</button>
+    <script>
+      const PUBLIC_KEY =
+        "BLT_cjs_Oifc5CKDemkNCRcPoVkaa5oClej_oYOrXFDYgocg70T205MnDIkMZhOUBGQ2-RMOFfuGfQ2-GNkNX0c";
+      const PRIVATE_KEY = "S2kJVVSeIrrxaqu38h7mgLwBjGCxvxrGi-rMqKjuKvs";
+
+      addEventListener("load", async () => {
+        let sw = await navigator.serviceWorker.register("./sw.js");
+        console.log(sw);
+      });
+
+      async function subscribe() {
+        let sw = await navigator.serviceWorker.ready;
+        let push = await sw.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: "",
+        });
+      }
+    </script>
+  </body>
+</html>
