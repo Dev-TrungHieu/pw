@@ -1,7 +1,9 @@
 var push = require("web-push");
+let keys = push.generateVAPIDKeys();
+console.log(keys);
 const PUBLIC_KEY =
-  "BLT_cjs_Oifc5CKDemkNCRcPoVkaa5oClej_oYOrXFDYgocg70T205MnDIkMZhOUBGQ2-RMOFfuGfQ2-GNkNX0c";
-const PRIVATE_KEY = "S2kJVVSeIrrxaqu38h7mgLwBjGCxvxrGi-rMqKjuKvs";
+  "BAG0bBaKTNvRtuCV2f-uV8kWGOd_XsJche-u8Ujd6j78HcREjEJ58Gs_SuQ1uE0FwvdCyHX0nnLv2NkwNnuNCYc";
+const PRIVATE_KEY = "7GHyCnw1-HDkOmW41_9sQZ9CN1pNlyuiuuanyQwYEBs";
 
 push.setVapidDetails("mailto: team@teamdibo.tk", PUBLIC_KEY, PRIVATE_KEY);
 
